@@ -1,0 +1,157 @@
+// Extend the existing data-i18n dictionaries; Spanish remains readable without JavaScript.
+const legalTranslations = {
+  "es": {
+    "Skip": "Saltar al contenido",
+    "Updated": "Última actualización: 15 de septiembre de 2026",
+    "LegalCopyright": "© 2026 Beetik MX. Todos los derechos reservados.",
+    "Revoke": "Administrar conexiones con Google",
+    "GooglePolicy": "Consultar Google API Services User Data Policy",
+    "privacyTitle": "Privacy Policy / Política de Privacidad | Beetik MX",
+    "privacyDescription": "Cómo Beetik MX utiliza y protege tus datos en sus aplicaciones e integraciones con Google OAuth, y cómo revocar acceso o solicitar su eliminación.",
+    "privacy_about_heading": "1. Quiénes somos y alcance",
+    "privacy_about_0": "Beetik MX desarrolla aplicaciones y automatizaciones propias. Esta política explica cómo se trata la información en los servicios de Beetik MX que enlazan a ella, incluidas sus integraciones con Google mediante OAuth 2.0.",
+    "privacy_about_1": "La infraestructura puede incluir beetikmx.com y subdominios como n8n.beetikmx.com (automatizaciones/backend), quinielamalenka.beetikmx.com, remember.beetikmx.com y futuras aplicaciones de Beetik MX. Cada aplicación debe explicar la función que solicita acceso; esta política no autoriza por sí sola el acceso a ningún dato.",
+    "privacy_data_heading": "2. Información y permisos de Google",
+    "privacy_data_0": "El acceso exacto depende de la aplicación, de la función que habilites y de los permisos (scopes) que autorices explícitamente en Google. No todas las aplicaciones solicitan todos estos servicios. Los permisos deben limitarse a lo necesario para la función solicitada.",
+    "privacy_data_1": "Datos básicos de cuenta: identificador de Google, nombre, dirección de correo electrónico y foto de perfil, según los permisos concedidos, para identificarte y asociar la integración a tu cuenta.",
+    "privacy_data_2": "Gmail: mensajes, remitentes, destinatarios, etiquetas y adjuntos que permita el alcance autorizado, para consultar, organizar, redactar o enviar correos únicamente como parte de las funciones o automatizaciones que solicites o habilites.",
+    "privacy_data_3": "Google Calendar: calendarios y datos de eventos, como títulos, fechas, participantes y descripciones, para consultar, crear o actualizar eventos y recordatorios de acuerdo con tu autorización.",
+    "privacy_data_4": "Google Drive: archivos, carpetas, contenido y metadatos incluidos en el permiso autorizado, para buscar, leer, crear, guardar u organizar documentos necesarios para la función que habilites.",
+    "privacy_oauth_heading": "3. Autorización y tokens OAuth",
+    "privacy_oauth_0": "La autorización se realiza en Google. Beetik MX no obtiene tu contraseña de Google. Los tokens OAuth de acceso y, cuando corresponda, de actualización permiten mantener las integraciones que autorizas sin solicitar tu contraseña.",
+    "privacy_oauth_1": "Los tokens y los datos necesarios pueden conservarse en la infraestructura que opera la aplicación mientras la integración esté activa. Su uso se limita a proporcionar o mantener las funcionalidades que solicites o habilites. Una nueva finalidad o permisos adicionales requieren información previa y la autorización que corresponda.",
+    "privacy_google_heading": "4. Google API Services y uso limitado",
+    "privacy_google_0": "El uso y la transferencia de información recibida de las APIs de Google por parte de Beetik MX cumplirán con la Google API Services User Data Policy, incluidos los requisitos de Limited Use (uso limitado).",
+    "privacy_google_1": "Beetik MX no vende datos personales obtenidos mediante las APIs de Google ni utiliza estos datos para publicidad.",
+    "privacy_google_2": "El acceso humano a datos de Google se limita a tu consentimiento específico, necesidades de seguridad o exigencias legales. Estas restricciones también deben respetarlas los proveedores que intervengan en su tratamiento.",
+    "privacy_providers_heading": "5. Proveedores y transferencias",
+    "privacy_providers_0": "Para operar los servicios pueden intervenir proveedores estrictamente necesarios de alojamiento, almacenamiento y ejecución de automatizaciones. Solo deben tratar la información necesaria para la función autorizada, conforme a esta política y sin fines propios de publicidad o venta.",
+    "privacy_providers_1": "Las transferencias de datos de Google se limitan a lo necesario para las funciones autorizadas con tu consentimiento, la seguridad o el cumplimiento de la ley, conforme a Limited Use. No se contempla compartirlos para fines ajenos a estas condiciones.",
+    "privacy_security_heading": "6. Seguridad",
+    "privacy_security_0": "Beetik MX se compromete a aplicar medidas razonables y proporcionales para proteger datos, credenciales y tokens frente a accesos, usos, pérdidas o divulgaciones no autorizados. Esto incluye limitar su acceso a quienes lo necesiten para operar la integración y proteger su almacenamiento y transmisión. No se garantiza seguridad absoluta ni se afirma contar con certificaciones específicas.",
+    "privacy_retention_heading": "7. Conservación y eliminación",
+    "privacy_retention_0": "La información se conserva solo mientras sea necesaria para la función que hayas habilitado, la gestión de tu solicitud o el cumplimiento de obligaciones legales aplicables. El criterio depende del tipo de dato, de la duración de la integración y de su finalidad; no se establece un plazo único para todas las aplicaciones.",
+    "privacy_retention_1": "Al dejar de ser necesaria o al recibir una solicitud procedente de eliminación, los tokens deben eliminarse; los demás datos deben eliminarse o, cuando sea apropiado, anonimizarse de forma irreversible. Si existe una obligación de conservación, el uso debe limitarse a esa obligación. Las copias de respaldo, si existen, se eliminan conforme a su ciclo de renovación y no deben reutilizarse para reactivar una integración revocada.",
+    "privacy_rights_heading": "8. Revocar acceso y ejercer tus derechos",
+    "privacy_rights_0": "Puedes revocar el acceso de Beetik MX en las conexiones de terceros de tu cuenta de Google. La revocación impide nuevos accesos mediante la autorización retirada y puede detener funciones que dependan de ella; no elimina automáticamente los datos ya conservados por una aplicación.",
+    "privacy_rights_1": "Para solicitar información sobre tus datos, acceso, corrección, eliminación u oposición al tratamiento, escribe a raulgarlem@gmail.com indicando la aplicación, el correo asociado y tu solicitud. Podemos pedir la información mínima necesaria para verificar tu identidad y evitar solicitudes no autorizadas. No envíes contraseñas ni tokens. Te informaremos del seguimiento y de cualquier limitación legal aplicable.",
+    "privacy_changes_heading": "9. Cambios y contacto",
+    "privacy_changes_0": "Las actualizaciones de esta política se publicarán en esta página con su fecha de revisión. Los cambios de finalidad en el uso de datos de Google se comunicarán antes de aplicarse y requerirán el consentimiento correspondiente. Para dudas sobre privacidad, utiliza el contacto indicado abajo.",
+    "termsTitle": "Terms of Service / Términos del Servicio | Beetik MX",
+    "termsDescription": "Condiciones de uso de las aplicaciones y automatizaciones de Beetik MX, integraciones con Google, responsabilidades, privacidad y contacto.",
+    "terms_acceptance_heading": "1. Aceptación",
+    "terms_acceptance_0": "Al utilizar las aplicaciones o automatizaciones de Beetik MX que enlazan a estos términos, aceptas estas condiciones en lo que corresponda al servicio utilizado. Si no estás de acuerdo, no utilices el servicio y revoca las integraciones que hayas autorizado.",
+    "terms_services_heading": "2. Servicios de Beetik MX",
+    "terms_services_0": "Beetik MX desarrolla aplicaciones y automatizaciones propias. Estas pueden funcionar en beetikmx.com y subdominios como n8n.beetikmx.com, quinielamalenka.beetikmx.com, remember.beetikmx.com y otros servicios futuros que adopten estos términos. Las funciones disponibles dependen de cada aplicación y de su configuración.",
+    "terms_use_heading": "3. Uso permitido",
+    "terms_use_0": "Utiliza los servicios de forma lícita, conforme a su finalidad y respetando los derechos de otras personas. Debes contar con los permisos necesarios sobre la información y los contenidos que proceses.",
+    "terms_use_1": "No debes acceder a cuentas ajenas sin autorización, eludir controles de acceso, distribuir contenido malicioso o correo no solicitado, ni interferir con la infraestructura. Revisa los destinatarios, archivos, calendarios y acciones de las automatizaciones antes de habilitarlas.",
+    "terms_third-parties_heading": "4. Servicios de terceros y OAuth",
+    "terms_third-parties_0": "Algunas funciones utilizan Gmail, Google Calendar, Google Drive o información básica de tu cuenta de Google. La conexión se realiza mediante OAuth 2.0 y depende de los permisos que autorices explícitamente. Beetik MX no obtiene tu contraseña de Google; los tokens permiten ejecutar y mantener las funciones autorizadas.",
+    "terms_third-parties_1": "Puedes rechazar permisos o revocar el acceso, aunque algunas funciones dejarán de estar disponibles. Los servicios de terceros se rigen también por sus propias condiciones y políticas, y pueden cambiar, limitar o interrumpir sus APIs. Estos términos no otorgan derechos sobre los servicios de Google ni implican su patrocinio.",
+    "terms_account_heading": "5. Responsabilidad sobre tu cuenta",
+    "terms_account_0": "Eres responsable de proteger el acceso a tu cuenta, revisar los permisos concedidos y comprobar la configuración de las automatizaciones que actives. Comunica cualquier uso no autorizado que detectes a raulgarlem@gmail.com y revoca las conexiones comprometidas desde tu cuenta de Google. Nunca compartas contraseñas o tokens por correo.",
+    "terms_availability_heading": "6. Disponibilidad y cambios",
+    "terms_availability_0": "Los servicios pueden modificarse, suspenderse o interrumpirse por mantenimiento, razones técnicas, seguridad o cambios en servicios externos. No se garantiza disponibilidad continua ni ausencia de errores. Cuando sea razonablemente posible, se informará de cambios relevantes para el uso del servicio.",
+    "terms_availability_1": "Las revisiones de estos términos se publicarán aquí con su fecha de actualización. Los cambios que requieran nueva autorización se comunicarán antes de aplicarse; puedes dejar de utilizar el servicio si no los aceptas.",
+    "terms_ip_heading": "7. Propiedad intelectual",
+    "terms_ip_0": "Los derechos sobre el software, la marca y los contenidos propios de Beetik MX pertenecen a sus respectivos titulares. El uso del servicio no transfiere su propiedad. Conservas los derechos sobre tus contenidos y autorizas únicamente el tratamiento necesario para ejecutar las funciones que solicites. Los componentes y servicios de terceros conservan sus propias licencias.",
+    "terms_liability_heading": "8. Responsabilidad",
+    "terms_liability_0": "Dentro de los límites permitidos por la legislación aplicable, Beetik MX no será responsable de daños indirectos ni de pérdidas atribuibles al uso indebido del servicio, configuraciones del usuario o fallos de terceros fuera de su control razonable. Revisa los resultados de las automatizaciones antes de basar en ellos decisiones o acciones importantes y conserva copias de la información que necesites.",
+    "terms_liability_1": "Ninguna disposición excluye responsabilidades que no puedan limitarse legalmente ni afecta derechos irrenunciables del usuario. Tampoco exime a Beetik MX de las obligaciones que le correspondan en materia de protección de datos.",
+    "terms_termination_heading": "9. Terminación y revocación",
+    "terms_termination_0": "Puedes dejar de utilizar los servicios y retirar el acceso desde las conexiones de terceros de tu cuenta de Google en cualquier momento. Beetik MX puede suspender el acceso ante uso indebido, riesgos de seguridad o incumplimientos de estas condiciones, de forma proporcional a la situación.",
+    "terms_termination_1": "La revocación detiene el acceso futuro autorizado, pero no elimina por sí sola los datos conservados. Puedes solicitar su eliminación por correo; su conservación y tratamiento se rigen por la Política de Privacidad.",
+    "terms_privacy_heading": "10. Privacidad y contacto",
+    "terms_privacy_0": "La Política de Privacidad explica el acceso, uso, conservación y eliminación de información y los compromisos relativos a las APIs de Google. Para dudas sobre estos términos, soporte o solicitudes relacionadas con tus datos, escribe a raulgarlem@gmail.com.",
+    "ReadPrivacy": "Leer la Política de Privacidad"
+  },
+  "en": {
+    "Skip": "Skip to content",
+    "Updated": "Last updated: September 15, 2026",
+    "LegalCopyright": "© 2026 Beetik MX. All rights reserved.",
+    "Revoke": "Manage Google connections",
+    "GooglePolicy": "Read the Google API Services User Data Policy",
+    "privacyTitle": "Privacy Policy / Política de Privacidad | Beetik MX",
+    "privacyDescription": "How Beetik MX uses and protects data in its applications and Google OAuth integrations, and how to revoke access or request deletion.",
+    "privacy_about_heading": "1. About us and scope",
+    "privacy_about_0": "Beetik MX develops its own applications and automations. This policy explains how information is handled in Beetik MX services that link to it, including integrations with Google through OAuth 2.0.",
+    "privacy_about_1": "The infrastructure may include beetikmx.com and subdomains such as n8n.beetikmx.com (automations/backend), quinielamalenka.beetikmx.com, remember.beetikmx.com, and future Beetik MX applications. Each application must explain the feature requesting access; this policy alone does not authorize access to any data.",
+    "privacy_data_heading": "2. Google information and permissions",
+    "privacy_data_0": "The exact access depends on the application, the feature you enable, and the permissions (scopes) you explicitly authorize with Google. Not every application requests all these services. Permissions must be limited to what the requested feature needs.",
+    "privacy_data_1": "Basic account information: Google identifier, name, email address, and profile picture, depending on the granted permissions, to identify you and associate the integration with your account.",
+    "privacy_data_2": "Gmail: messages, senders, recipients, labels, and attachments allowed by the authorized scope, to read, organize, draft, or send email only as part of the features or automations you request or enable.",
+    "privacy_data_3": "Google Calendar: calendars and event information, such as titles, dates, participants, and descriptions, to read, create, or update events and reminders according to your authorization.",
+    "privacy_data_4": "Google Drive: files, folders, content, and metadata covered by the authorized permission, to find, read, create, save, or organize documents needed for the feature you enable.",
+    "privacy_oauth_heading": "3. Authorization and OAuth tokens",
+    "privacy_oauth_0": "Authorization takes place with Google. Beetik MX does not obtain your Google password. OAuth access tokens and, when applicable, refresh tokens allow your authorized integrations to remain connected without requesting your password.",
+    "privacy_oauth_1": "Tokens and necessary data may be stored in the infrastructure operating the application while the integration is active. Their use is limited to providing or maintaining features you request or enable. A new purpose or additional permissions require prior disclosure and the relevant authorization.",
+    "privacy_google_heading": "4. Google API Services and Limited Use",
+    "privacy_google_0": "Beetik MX’s use and transfer of information received from Google APIs will comply with the Google API Services User Data Policy, including the Limited Use requirements.",
+    "privacy_google_1": "Beetik MX does not sell personal data obtained through Google APIs or use it for advertising.",
+    "privacy_google_2": "Human access to Google data is limited to your specific consent, security needs, or legal requirements. Providers involved in processing the data must also follow these restrictions.",
+    "privacy_providers_heading": "5. Providers and transfers",
+    "privacy_providers_0": "Operating the services may involve strictly necessary hosting, storage, and automation execution providers. They must only process information needed for the authorized feature, in accordance with this policy and without their own advertising or sales purposes.",
+    "privacy_providers_1": "Transfers of Google data are limited to what is needed for authorized features with your consent, security, or legal compliance, under Limited Use. Sharing for purposes outside these conditions is not contemplated.",
+    "privacy_security_heading": "6. Security",
+    "privacy_security_0": "Beetik MX commits to applying reasonable and proportionate measures to protect data, credentials, and tokens against unauthorized access, use, loss, or disclosure. This includes limiting access to those who need it to operate the integration and protecting storage and transmission. Absolute security is not guaranteed, and no specific certifications are claimed.",
+    "privacy_retention_heading": "7. Retention and deletion",
+    "privacy_retention_0": "Information is retained only as long as needed for the feature you enabled, handling your request, or complying with applicable legal obligations. The criteria depend on the data type, integration duration, and purpose; there is no single retention period for all applications.",
+    "privacy_retention_1": "When no longer needed or upon a valid deletion request, tokens must be deleted; other data must be deleted or, where appropriate, irreversibly anonymized. If a retention obligation applies, use must be limited to that obligation. Backups, if any, are deleted according to their renewal cycle and must not be reused to reactivate a revoked integration.",
+    "privacy_rights_heading": "8. Revoking access and exercising your rights",
+    "privacy_rights_0": "You can revoke Beetik MX access in your Google Account’s third-party connections. Revocation prevents new access through the withdrawn authorization and may stop dependent features; it does not automatically delete data already retained by an application.",
+    "privacy_rights_1": "To request information about your data, access, correction, deletion, or to object to processing, write to raulgarlem@gmail.com with the application, associated email address, and your request. We may ask for the minimum information needed to verify your identity and prevent unauthorized requests. Do not send passwords or tokens. We will inform you about follow-up and any applicable legal limitation.",
+    "privacy_changes_heading": "9. Changes and contact",
+    "privacy_changes_0": "Updates to this policy will be published on this page with their revision date. Changes in the purpose of Google data use will be communicated before taking effect and will require the relevant consent. For privacy questions, use the contact below.",
+    "termsTitle": "Terms of Service / Términos del Servicio | Beetik MX",
+    "termsDescription": "Terms for Beetik MX applications and automations, Google integrations, responsibilities, privacy, and contact.",
+    "terms_acceptance_heading": "1. Acceptance",
+    "terms_acceptance_0": "By using Beetik MX applications or automations that link to these terms, you accept these conditions as applicable to the service used. If you disagree, do not use the service and revoke any integrations you have authorized.",
+    "terms_services_heading": "2. Beetik MX services",
+    "terms_services_0": "Beetik MX develops its own applications and automations. They may operate on beetikmx.com and subdomains such as n8n.beetikmx.com, quinielamalenka.beetikmx.com, remember.beetikmx.com, and future services that adopt these terms. Available features depend on each application and its configuration.",
+    "terms_use_heading": "3. Permitted use",
+    "terms_use_0": "Use the services lawfully, for their intended purpose, and respecting other people’s rights. You must have the necessary permissions for the information and content you process.",
+    "terms_use_1": "You must not access other people’s accounts without authorization, bypass access controls, distribute malicious content or unsolicited email, or interfere with the infrastructure. Review automation recipients, files, calendars, and actions before enabling them.",
+    "terms_third-parties_heading": "4. Third-party services and OAuth",
+    "terms_third-parties_0": "Some features use Gmail, Google Calendar, Google Drive, or basic Google Account information. Connections use OAuth 2.0 and depend on the permissions you explicitly authorize. Beetik MX does not obtain your Google password; tokens enable authorized features to operate and remain connected.",
+    "terms_third-parties_1": "You may decline permissions or revoke access, although some features will become unavailable. Third-party services are also governed by their own terms and policies and may change, limit, or interrupt their APIs. These terms do not grant rights over Google services or imply Google sponsorship.",
+    "terms_account_heading": "5. Responsibility for your account",
+    "terms_account_0": "You are responsible for protecting access to your account, reviewing granted permissions, and checking the configuration of automations you enable. Report any unauthorized use you detect to raulgarlem@gmail.com and revoke compromised connections from your Google Account. Never share passwords or tokens by email.",
+    "terms_availability_heading": "6. Availability and changes",
+    "terms_availability_0": "Services may be changed, suspended, or interrupted for maintenance, technical reasons, security, or changes in external services. Continuous availability or error-free operation is not guaranteed. Where reasonably possible, significant changes affecting use of the service will be communicated.",
+    "terms_availability_1": "Revisions to these terms will be published here with their update date. Changes requiring new authorization will be communicated before taking effect; you may stop using the service if you do not accept them.",
+    "terms_ip_heading": "7. Intellectual property",
+    "terms_ip_0": "Rights to Beetik MX software, branding, and original content belong to their respective holders. Using the service does not transfer ownership. You retain rights to your content and authorize only the processing needed to perform requested features. Third-party components and services retain their own licenses.",
+    "terms_liability_heading": "8. Liability",
+    "terms_liability_0": "Within the limits permitted by applicable law, Beetik MX will not be liable for indirect damages or losses attributable to misuse, user configurations, or third-party failures outside its reasonable control. Review automation results before relying on them for important decisions or actions, and keep copies of information you need.",
+    "terms_liability_1": "Nothing excludes liability that cannot legally be limited or affects non-waivable user rights. These terms also do not exempt Beetik MX from its applicable data protection obligations.",
+    "terms_termination_heading": "9. Termination and revocation",
+    "terms_termination_0": "You may stop using the services and withdraw access from your Google Account’s third-party connections at any time. Beetik MX may suspend access in response to misuse, security risks, or breaches of these conditions, in a manner proportionate to the situation.",
+    "terms_termination_1": "Revocation stops future authorized access but does not itself delete retained data. You may request deletion by email; retention and handling are governed by the Privacy Policy.",
+    "terms_privacy_heading": "10. Privacy and contact",
+    "terms_privacy_0": "The Privacy Policy explains information access, use, retention, and deletion, and commitments relating to Google APIs. For questions about these terms, support, or requests concerning your data, write to raulgarlem@gmail.com.",
+    "ReadPrivacy": "Read the Privacy Policy"
+  }
+};
+
+Object.keys(legalTranslations).forEach(lang => Object.assign(translations[lang], legalTranslations[lang]));
+
+const legalSwitcher = document.querySelector('.language-switcher');
+legalSwitcher.hidden = false;
+legalSwitcher.addEventListener('click', event => {
+  const button = event.target.closest('button[data-lang]');
+  if (!button) return;
+  const lang = button.dataset.lang;
+  const dictionary = translations[lang];
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const value = dictionary[element.dataset.i18n];
+    if (value) element.textContent = value;
+  });
+  document.documentElement.lang = lang;
+  const page = document.body.dataset.legalPage;
+  document.title = dictionary[page + 'Title'];
+  document.querySelector('meta[name="description"]').content = dictionary[page + 'Description'];
+  legalSwitcher.querySelectorAll('button[data-lang]').forEach(control => {
+    control.setAttribute('aria-pressed', String(control.dataset.lang === lang));
+  });
+});

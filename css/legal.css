@@ -1,0 +1,43 @@
+/* Legal pages reuse the site's branding; these overrides never affect the home page. */
+.legal-page { background: #050509; }
+.legal-page .page { margin: 0 auto; }
+.legal-page .header { position: relative; }
+.legal-page .grid-container { min-height: 120px; height: auto; padding: 24px; flex-wrap: wrap; gap: 20px; }
+.legal-page .logo { margin: 0; height: auto; }
+.legal-page .desc-text { position: static; margin-left: auto; }
+.legal-page .language-switcher { position: static; display: flex; gap: 8px; }
+.legal-page .language-switcher[hidden] { display: none; }
+.legal-page .language-switcher button { padding: 8px; line-height: 1; border: 1px solid transparent; letter-spacing: normal; }
+.legal-page .language-switcher button[aria-pressed="true"] { border-color: #e7a717; }
+.legal-page .language-switcher img { margin: 0; vertical-align: middle; }
+.legal-page .navbar { width: 100%; flex-wrap: wrap; gap: 12px; padding: 12px 24px; }
+.legal-nav-links { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 16px; }
+.legal-nav-links a { color: #fff; padding: 10px 0; }
+.legal-nav-links a[aria-current="page"] { color: #e7a717; }
+.legal-document { position: relative; z-index: 1; width: min(100%, 900px); margin: 0 auto; padding: 48px 24px 64px; background: rgba(5, 5, 9, 0.94); color: #ffece3; font-size: 18px; line-height: 1.75; overflow-wrap: anywhere; }
+.legal-document h1 { font-family: 'Rajdhani', sans-serif; font-size: clamp(30px, 4vw, 46px); color: #fff; text-align: left; line-height: 1.2; }
+.legal-document h2 { margin: 36px 0 12px; color: #ffa170; font-size: 24px; line-height: 1.35; }
+.legal-document p { margin: 12px 0; }
+.legal-document ul { padding-left: 24px; }
+.legal-document li { margin-bottom: 12px; }
+.legal-document a { color: #0ff; text-underline-offset: 3px; }
+.legal-document section { scroll-margin-top: 24px; }
+.legal-updated { color: #d0d0d0; font-size: 16px; }
+.legal-page .footer { z-index: 1; background: #0b0c2a; }
+.legal-page .footer-logo { position: static; }
+.legal-page .footer-copy { color: #d0d0d0; }
+.legal-page a:focus-visible, .legal-page button:focus-visible { outline: 3px solid #0ff; outline-offset: 4px; }
+.legal-skip { position: absolute; top: -100px; left: 16px; z-index: 10; padding: 12px; background: #050509; color: #0ff; }
+.legal-skip:focus { top: 12px; }
+@media (max-width: 600px) {
+  .legal-page .grid-container { padding: 16px; gap: 12px; }
+  .legal-page .desc-text { display: none; }
+  .legal-page .Beetik-text { font-size: 28px; }
+  .legal-page .circle { width: 56px; height: 56px; }
+  .legal-page .navbar { padding: 8px 16px; }
+  .legal-document { padding: 32px 20px 48px; font-size: 17px; }
+  .legal-document h2 { font-size: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .legal-page *, .legal-page *::before, .legal-page *::after { animation: none !important; transition: none !important; }
+}
