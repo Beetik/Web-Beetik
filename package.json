@@ -1,0 +1,14 @@
+{
+  "name": "web-beetik",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web de Beetik MX",
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}

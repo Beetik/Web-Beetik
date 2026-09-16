@@ -1,5 +1,7 @@
-// Extend the existing data-i18n dictionaries; Spanish remains readable without JavaScript.
-const legalTranslations = {
+import type { Translations } from "../types/i18n.js";
+
+// Spanish remains readable in the HTML when JavaScript is unavailable.
+export const legalTranslations: Translations = {
   "es": {
     "Skip": "Saltar al contenido",
     "Updated": "Última actualización: 15 de septiembre de 2026",
@@ -134,24 +136,3 @@ const legalTranslations = {
   }
 };
 
-Object.keys(legalTranslations).forEach(lang => Object.assign(translations[lang], legalTranslations[lang]));
-
-const legalSwitcher = document.querySelector('.language-switcher');
-legalSwitcher.hidden = false;
-legalSwitcher.addEventListener('click', event => {
-  const button = event.target.closest('button[data-lang]');
-  if (!button) return;
-  const lang = button.dataset.lang;
-  const dictionary = translations[lang];
-  document.querySelectorAll('[data-i18n]').forEach(element => {
-    const value = dictionary[element.dataset.i18n];
-    if (value) element.textContent = value;
-  });
-  document.documentElement.lang = lang;
-  const page = document.body.dataset.legalPage;
-  document.title = dictionary[page + 'Title'];
-  document.querySelector('meta[name="description"]').content = dictionary[page + 'Description'];
-  legalSwitcher.querySelectorAll('button[data-lang]').forEach(control => {
-    control.setAttribute('aria-pressed', String(control.dataset.lang === lang));
-  });
-});

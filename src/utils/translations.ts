@@ -1,4 +1,6 @@
-const translations = {
+import type { Translations } from "../types/i18n.js";
+
+export const translations: Translations = {
   en: {
     ProyectosyCapacitacion: "Projects and Training",
     Home: "Home",

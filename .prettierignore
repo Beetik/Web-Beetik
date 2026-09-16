@@ -1,0 +1,21 @@
+# Dependencies and generated output
+node_modules/
+public/js/
+
+# Third-party source and compiled vendor assets
+src/vendor/
+metadata/
+public/webfonts/
+public/css/all.css
+public/css/brands.css
+public/css/bootstrap.css
+public/css/fontawesome.css
+public/css/normalize.css
+public/css/svg-with-js.css
+public/css/themes/
+*.min.css
+*.min.js
+*.map
+
+# Editor-generated legacy files
+*.sublime-workspace
