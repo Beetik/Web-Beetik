@@ -2,6 +2,18 @@
 .legal-page { background: #050509; }
 .legal-page .page { margin: 0 auto; }
 .legal-page .header { position: relative; }
+/* estilos.css posiciona .header > .container y .header > .menu como
+   position: fixed (pensado para el efecto "sticky" del hero de inicio).
+   Las páginas legales no cargan ese script (legal.js no inicializa Header),
+   así que ambos bloques quedaban flotando fijos sobre el viewport, tapando
+   el inicio del texto. Aquí los volvemos parte del flujo normal del
+   documento para que el contenido empiece justo debajo del encabezado. */
+.legal-page .header > .container,
+.legal-page .header > .menu {
+  position: static;
+  transform: none;
+  width: 100%;
+}
 .legal-page .grid-container { min-height: 120px; height: auto; padding: 24px; flex-wrap: wrap; gap: 20px; }
 .legal-page .logo { margin: 0; height: auto; }
 .legal-page .desc-text { position: static; margin-left: auto; }

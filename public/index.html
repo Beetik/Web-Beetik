@@ -1,31 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Beetik Mexico - Proyectos, Manufactura y Capacitación</title>
+  <title>Beetik MX - Ingeniería, Grabado Láser, Prototipado y Automatización</title>
+  <meta name="description" content="Beetik MX combina ingeniería, grabado láser, prototipado, electrónica y automatización para convertir tu idea en una solución funcional. Encuéntranos también cada fin de semana en el Bazar del Oro.">
+  <meta name="keywords" content="Grabado láser, Ingeniería, Prototipado, Automatización, Electrónica, Manufactura, CAD, CAM, CAE, Bazar del Oro, Beetik MX">
+  <meta name="author" content="Beetik MX">
+  <link rel="canonical" href="https://beetikmx.com/">
   <link rel="shortcut icon" href="img/Estrella_N_transparente.png" />
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
-
 
   <link rel="stylesheet" href="css/all.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/fontawesome.css">
-  
-  <!-- Your final refactored styles -->
   <link rel="stylesheet" href="css/estilos.css">
-
-  <meta name="keywords" content="Cursos, Corte, Laser, Impresion, 3D, Electrónica, STL, Videojuegos, Ingeniería, Proyectos, Nuevo, Manufactura, Diseño, Grabado, Capacitación, Tecnología, Desrrollo, Artificial, Calidad, Beetik, Taller, Crear, STEAM, Makerspace, CAD, CAE, CAM">
-  <meta name="description" content="Estamos enfocados en capacitar en nuevas tecnologías, y ofrecer servicios de manufactura de calidad para desarrollo de proyectosEstamos enfocados en capacitar en nuevas tecnologías, y ofrecer servicios de manufactura de calidad para desarrollo de proyectos">
-  <meta name="title" content="Beetik Mexico - Proyectos, Manufactura, Cursos y Capacitación">
-  <meta name="author" content="Beetik Mexico">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <title>Beetik Mexico - Projects, Manufacturing, and Training</title>
-  <link rel="shortcut icon" href="img/Estrella_N_transparente.png" />
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content" data-i18n="Skip">Saltar al contenido</a>
 
   <div class="page">
 
@@ -47,7 +40,7 @@
               <em class="Beetik-text">BEETIK MX</em>
             </a>
 
-            <div class="language-switcher">
+            <div class="language-switcher" role="group" aria-label="Selector de idioma">
               <button type="button" class="language-button" data-lang="es" aria-label="Cambiar idioma a español" aria-pressed="true">
                 <img src="img/mx-flag.png" alt="" />
               </button>
@@ -64,50 +57,50 @@
           </div>
         </div>
         <div class="menu">
-          <nav class="navbar" role="navigation" id="main_menu">
+          <nav class="navbar" role="navigation" aria-label="Navegación principal" id="main_menu">
             <a href="#!">
               <img src="img/Beetik3D_white1.png" alt="Beetik MX" title="Beetik Main" class="nav-logo">
             </a>
-            <button id="burgerButton" class="checkbtn" aria-label="Toggle navigation">
-              <i class="fas fa-bars"></i>
+            <button id="burgerButton" class="checkbtn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-items">
+              <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
-            <ul class="menu-items">
+            <ul class="menu-items" id="menu-items">
               <li class="nav-items active">
-                <a class="nav-link-item" href="index.html">
+                <a class="nav-link-item" href="index.html" aria-current="page">
                   <h3>
-                    <span class="fas fa-home"></span>
+                    <span class="fas fa-home" aria-hidden="true"></span>
                     <span data-i18n="Home">Inicio</span>
                   </h3>
                 </a>
               </li>
-              <li class="nav-items">
-                <a class="nav-link-item" href="models.html">
+              <li class="nav-items has-dropdown">
+                <a class="nav-link-item" href="grabado-laser.html" aria-haspopup="true" aria-expanded="false">
                   <h3>
-                    <span id="3dicon" class="fab fa-codepen fa-spin"></span>
-                    <span data-i18n="Models3D">Modelos 3D</span>
+                    <i class="fas fa-concierge-bell" aria-hidden="true"></i>
+                    <span data-i18n="Services">Servicios</span>
+                    <i class="fas fa-caret-down dropdown-caret" aria-hidden="true"></i>
+                  </h3>
+                </a>
+                <ul class="dropdown-menu" aria-label="Submenú de Servicios">
+                  <li><a href="grabado-laser.html"><i class="fas fa-fire" aria-hidden="true"></i> <span data-i18n="LaserEngraving">Grabado Láser</span></a></li>
+                  <li><a href="ingenieria.html"><i class="fas fa-drafting-compass" aria-hidden="true"></i> <span data-i18n="Engineering">Ingeniería y Prototipado</span></a></li>
+                  <li><a href="automatizacion.html"><i class="fas fa-robot" aria-hidden="true"></i> <span data-i18n="Automation">Automatización &amp; IA</span></a></li>
+                  <li><a href="proyectos.html"><i class="fas fa-project-diagram" aria-hidden="true"></i> <span data-i18n="Projects">Proyectos</span></a></li>
+                  <li><a href="servicios.html"><i class="fas fa-graduation-cap" aria-hidden="true"></i> <span data-i18n="MoreServices">Más Servicios</span></a></li>
+                </ul>
+              </li>
+              <li class="nav-items">
+                <a class="nav-link-item" href="Nosotros.html">
+                  <h3>
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                    <span data-i18n="About">Nosotros</span>
                   </h3>
                 </a>
               </li>
               <li class="nav-items">
-                <a class="nav-link-item" href="materials.html">
+                <a class="nav-link-item" href="contacto.html">
                   <h3>
-                    <span class="fas fa-boxes"></span>
-                    <span data-i18n="ShopItems">Compra de Artículos</span>
-                  </h3>
-                </a>
-              </li>
-              <li class="nav-items">
-                <a class="nav-link-item" href="services.html">
-                  <h3>
-                    <i class="fas fa-concierge-bell"></i>
-                    <span data-i18n="MoreServices">Más Servicios</span>
-                  </h3>
-                </a>
-              </li>
-              <li class="nav-items">
-                <a class="nav-link-item" href="contact.html">
-                  <h3>
-                    <i class="fas fa-at"></i>
+                    <i class="fas fa-at" aria-hidden="true"></i>
                     <span data-i18n="Contact">Contacto</span>
                   </h3>
                 </a>
@@ -131,207 +124,328 @@
         </div>
       </section>
 
-      <!-- Main Content -->
-      <section class="content-block">
-        <main class="articles" role="main">
-          <!-- Courses -->
-          <article class="coursesArt card">
+      <main id="main-content">
+
+      <!-- ¿Qué podemos construir para ti? -->
+      <section class="section" id="que-construimos" aria-labelledby="que-construimos-heading">
+        <div class="section-heading">
+          <span class="eyebrow" data-i18n="WhatWeBuildEyebrow">Beetik MX</span>
+          <h2 id="que-construimos-heading" data-i18n="WhatWeBuildTitle">¿Qué podemos construir para ti?</h2>
+          <p data-i18n="WhatWeBuildText">Del grabado láser personalizado a la ingeniería y la automatización: en Beetik combinamos fabricación, tecnología y creatividad para convertir ideas en soluciones reales.</p>
+        </div>
+        <div class="articles">
+          <!-- Grabado Láser -->
+          <article class="laserArt card">
             <figure class="card-img">
-              <img src="img/curso-matlab.jpg" alt="COURSES">
+              <img src="img/manufactura_pcb.png" alt="Grabado Láser">
             </figure>
             <div class="card-top-text">
-              <h2 class="card-title" data-i18n="CoursesTitle">Impartición de Cursos</h2>
-              <p class="card-subtitle" data-i18n="CoursesSubtitle">Aprende, Actualízate y Desarrolla</p>
+              <h2 class="card-title" data-i18n="LaserEngravingTitle">Grabado Láser</h2>
+              <p class="card-subtitle" data-i18n="LaserEngravingSubtitle">Trae tu idea, la hacemos personal</p>
               <div class="card-bottom-text">
-                <p class="card-text" data-i18n="CoursesText">Aprende con los temarios más completos que puedas encontrar, nuestros instructores experimentados te ayudarán a manejar estas herramientas como un profesional.</p>
-                <p class="card-btn"><a><small class="text-muted" data-i18n="LearnMore">Conoce más</small></a></p>
+                <p class="card-text" data-i18n="LaserEngravingTeaser">Personaliza tumblers, botellas, llaveros, madera, acrílico y regalos. Ideal para eventos, marcas y detalles únicos.</p>
+                <p class="card-btn"><a href="grabado-laser.html"><small class="text-muted" data-i18n="SeeMore">Ver más</small></a></p>
               </div>
-            </article>
+            </div>
+          </article>
 
-            <!-- Training -->
-            <article class="trainingArt card">
-              <figure class="card-img">
-                <img src="img/capacitaciones_curso_impresion.png" alt="TECH">
-              </figure>
-              <div class="card-top-text">
-                <h2 class="card-title" data-i18n="TrainingTitle">Capacitamos en nuevas tecnologías</h2>
-                <p class="card-subtitle" data-i18n="TrainingSubtitle">Mantenemos tus conocimientos actualizados</p>
-                <div class="card-bottom-text">
-                  <p class="card-text" data-i18n="TrainingText">La tecnología de vanguardia potencia la productividad de las empresas, en Beetik aprenderás desde lo básico hasta implementaciones industriales avanzadas</p>
-                  <p class="card-btn"><a><small class="text-muted" data-i18n="LearnMore">Conoce más</small></a></p>
-                </div>
-              </article>
+          <!-- Ingeniería y Prototipado -->
+          <article class="engineeringArt card">
+            <figure class="card-img">
+              <img src="img/curso-matlab.jpg" alt="Ingeniería y Prototipado">
+            </figure>
+            <div class="card-top-text">
+              <h2 class="card-title" data-i18n="EngineeringTitle">Ingeniería y Prototipado</h2>
+              <p class="card-subtitle" data-i18n="EngineeringSubtitle">De la idea al prototipo funcional</p>
+              <div class="card-bottom-text">
+                <p class="card-text" data-i18n="EngineeringTeaser">Convertimos ideas, bocetos o piezas rotas en prototipos funcionales, diseño CAD y manufactura.</p>
+                <p class="card-btn"><a href="ingenieria.html"><small class="text-muted" data-i18n="SeeMore">Ver más</small></a></p>
+              </div>
+            </div>
+          </article>
 
-              <!-- Manufacturing -->
-              <article class="manufacturingArt card">
-                <figure class="card-img">
-                  <img src="img/manufactura_pcb.png" alt="TECH">
-                </figure>
-                <div class="card-top-text">
-                  <h2 class="card-title" data-i18n="ManufacturingTitle">Trabajos de manufactura</h2>
-                  <p class="card-subtitle" data-i18n="ManufacturingSubtitle">Prototipado Rápido y material para maquinaria</p>
-                  <div class="card-bottom-text">
-                    <p class="card-text" data-i18n="ManufacturingText">¿Buscas trabajos de calidad para piezas en Impresión 3D?, Realizar Corte y/o grabado Láser, Tarjetas de Circuito Impreso (PCB) en CNC. Eso y más ofrece Beetik</p>
-                    <p class="card-btn"><a><small class="text-muted" data-i18n="LearnMore">Conoce más</small></a></p>
+          <!-- Automatización & IA -->
+          <article class="automationArt card">
+            <figure class="card-img">
+              <img src="img/proyectos_automatizacion.png" alt="Automatización y IA">
+            </figure>
+            <div class="card-top-text">
+              <h2 class="card-title" data-i18n="AutomationTitle">Automatización &amp; IA</h2>
+              <p class="card-subtitle" data-i18n="AutomationSubtitle">Conecta tus herramientas de negocio</p>
+              <div class="card-bottom-text">
+                <p class="card-text" data-i18n="AutomationTeaser">Conectamos WhatsApp, calendarios, correos y bases de datos para automatizar procesos de tu negocio.</p>
+                <p class="card-btn"><a href="automatizacion.html"><small class="text-muted" data-i18n="SeeMore">Ver más</small></a></p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Grabado Láser: sección visual principal -->
+      <section class="section laser-section" id="grabado-laser" aria-labelledby="grabado-laser-heading">
+        <div class="section-heading">
+          <span class="eyebrow" data-i18n="LaserEyebrow">Nuestro servicio más visible</span>
+          <h2 id="grabado-laser-heading" data-i18n="LaserSectionTitle">Grabado Láser y Productos Personalizados</h2>
+          <p data-i18n="LaserSectionText">Trae tu idea, nosotros la hacemos personal. Grabamos tumblers, botellas, llaveros, madera, acrílico, regalos y productos corporativos.</p>
+        </div>
+        <div class="engrave-grid">
+          <div class="engrave-item"><i class="fas fa-mug-hot" aria-hidden="true"></i><span data-i18n="EngraveTumblers">Tumblers</span></div>
+          <div class="engrave-item"><i class="fas fa-wine-bottle" aria-hidden="true"></i><span data-i18n="EngraveBottles">Botellas</span></div>
+          <div class="engrave-item"><i class="fas fa-key" aria-hidden="true"></i><span data-i18n="EngraveKeychains">Llaveros</span></div>
+          <div class="engrave-item"><i class="fas fa-tree" aria-hidden="true"></i><span data-i18n="EngraveWood">Madera</span></div>
+          <div class="engrave-item"><i class="fas fa-shapes" aria-hidden="true"></i><span data-i18n="EngraveAcrylic">Acrílico</span></div>
+          <div class="engrave-item"><i class="fas fa-gift" aria-hidden="true"></i><span data-i18n="EngraveGifts">Regalos</span></div>
+          <div class="engrave-item"><i class="fas fa-certificate" aria-hidden="true"></i><span data-i18n="EngraveCorporate">Corporativo</span></div>
+          <div class="engrave-item"><i class="fas fa-glass-cheers" aria-hidden="true"></i><span data-i18n="EngraveEvents">Eventos</span></div>
+        </div>
+        <div class="cta-row">
+          <a class="btn-whatsapp" href="https://wa.me/525658274035?text=Hola%2C%20me%20gustar%C3%ADa%20cotizar%20un%20grabado%20l%C3%A1ser" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> <span data-i18n="AskEngraving">¿Qué te gustaría grabar?</span>
+          </a>
+          <a class="btn-outline" href="grabado-laser.html" data-i18n="SeeCatalog">Ver catálogo completo</a>
+        </div>
+      </section>
+
+      <!-- Bazar de fin de semana -->
+      <section class="section" id="bazar" aria-labelledby="bazar-heading">
+        <div class="bazaar-section">
+          <div class="bazaar-details">
+            <span class="eyebrow" data-i18n="BazaarEyebrow">Grabado en vivo</span>
+            <h2 id="bazar-heading" data-i18n="BazaarTitle">Encuéntranos este fin de semana</h2>
+            <p data-i18n="BazaarText">Cada sábado y domingo, Beetik MX ofrece grabado láser en vivo y productos personalizados en el Bazar del Oro.</p>
+            <ul class="bazaar-list">
+              <li><i class="fas fa-store" aria-hidden="true"></i> <span data-i18n="BazaarName"><strong>Bazar del Oro</strong></span></li>
+              <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <a href="https://maps.app.goo.gl/UqgCXhcNdWT5ADR9A" target="_blank" rel="noopener" data-i18n="BazaarLocation">Ver ubicación en Google Maps</a></li>
+              <li><i class="fas fa-clock" aria-hidden="true"></i> <span data-i18n="BazaarSchedule">Sábados y Domingos, 12:00 p.m. a 6:00 p.m.</span></li>
+            </ul>
+            <a class="btn-whatsapp" href="https://wa.me/525658274035?text=Hola%2C%20quiero%20preguntar%20sobre%20el%20Bazar%20del%20Oro" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i> <span data-i18n="AskBazaar">Escríbenos antes de tu visita</span>
+            </a>
+          </div>
+          <div class="bazaar-map">
+            <iframe src="https://maps.google.com/maps?q=Bazar%20del%20Oro&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Ubicación del Bazar del Oro" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ingeniería y Prototipado Rápido -->
+      <section class="section" id="ingenieria" aria-labelledby="ingenieria-heading">
+        <div class="section-heading">
+          <span class="eyebrow" data-i18n="EngineeringEyebrow">La base técnica de Beetik</span>
+          <h2 id="ingenieria-heading" data-i18n="EngineeringSectionTitle">Ingeniería, Prototipado y Manufactura</h2>
+          <p data-i18n="EngineeringSectionText">No necesitas un diseño terminado. Llega con una idea, un boceto, una foto, un componente roto o un archivo CAD — nosotros desarrollamos la solución.</p>
+        </div>
+        <div class="process-steps">
+          <span class="process-step"><i class="fas fa-lightbulb" aria-hidden="true"></i> Idea</span>
+          <span class="process-arrow" aria-hidden="true">→</span>
+          <span class="process-step"><i class="fas fa-pencil-ruler" aria-hidden="true"></i> Diseño</span>
+          <span class="process-arrow" aria-hidden="true">→</span>
+          <span class="process-step"><i class="fas fa-cube" aria-hidden="true"></i> Prototipo</span>
+          <span class="process-arrow" aria-hidden="true">→</span>
+          <span class="process-step"><i class="fas fa-vial" aria-hidden="true"></i> Prueba</span>
+          <span class="process-arrow" aria-hidden="true">→</span>
+          <span class="process-step"><i class="fas fa-industry" aria-hidden="true"></i> Manufactura</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn-outline" href="ingenieria.html" data-i18n="SeeEngineering">Conoce el servicio completo</a>
+        </div>
+      </section>
+
+      <!-- Automatización & IA -->
+      <section class="section" id="automatizacion" aria-labelledby="automatizacion-heading">
+        <div class="section-heading">
+          <span class="eyebrow" data-i18n="AutomationEyebrow">Nuevo</span>
+          <h2 id="automatizacion-heading" data-i18n="AutomationSectionTitle">Automatiza el trabajo repetitivo. Conecta tus herramientas.</h2>
+          <p data-i18n="AutomationSectionText">Desarrollamos automatizaciones de negocio con APIs e inteligencia artificial: desde agendar citas hasta sincronizar información entre plataformas.</p>
+        </div>
+        <div class="automation-flow">
+          <span class="automation-node"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp</span>
+          <span class="process-arrow" aria-hidden="true">→</span>
+          <span class="automation-node"><i class="fas fa-robot" aria-hidden="true"></i> IA</span>
+          <span class="process-arrow" aria-hidden="true">→</span>
+          <span class="automation-node"><i class="fas fa-database" aria-hidden="true"></i> Base de datos</span>
+          <span class="process-arrow" aria-hidden="true">→</span>
+          <span class="automation-node"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Calendario</span>
+          <span class="process-arrow" aria-hidden="true">→</span>
+          <span class="automation-node"><i class="fas fa-envelope" aria-hidden="true"></i> Email</span>
+        </div>
+        <div class="automation-examples">
+          <div class="automation-example"><strong data-i18n="AutoEx1Title">Organiza citas automáticamente</strong>Sincroniza tu calendario y confirma citas sin intervención manual.</div>
+          <div class="automation-example"><strong data-i18n="AutoEx2Title">Envía recordatorios a tus clientes</strong>Reduce inasistencias con recordatorios automáticos por WhatsApp o email.</div>
+          <div class="automation-example"><strong data-i18n="AutoEx3Title">Conecta WhatsApp con tu base de datos</strong>Registra y consulta información de clientes directamente desde la conversación.</div>
+          <div class="automation-example"><strong data-i18n="AutoEx4Title">Genera reportes automáticos</strong>Recibe reportes periódicos sin tener que armarlos a mano cada vez.</div>
+        </div>
+        <div class="cta-row">
+          <a class="btn-outline" href="automatizacion.html" data-i18n="SeeAutomation">Conoce el servicio completo</a>
+        </div>
+      </section>
+
+      <!-- Proyectos destacados: portafolio + ejemplo de servicio -->
+      <section class="section" id="proyectos" aria-labelledby="proyectos-heading">
+        <div class="complement-cls">
+          <aside class="complementary" role="complementary" aria-label="Proyectos destacados">
+            <h1 id="proyectos-heading" data-i18n="OurExperience">Proyectos que respaldan lo que podemos hacer por ti</h1>
+
+            <!--Comienza tarjeta tipo Blog-->
+            <div class="blog-card">
+              <input type="radio" name="select" id="tap-1" checked>
+              <input type="radio" name="select" id="tap-2">
+              <input type="radio" name="select" id="tap-3">
+              <input type="checkbox" id="imgTap">
+
+              <div class="sliders">
+                <label for="tap-1" class="tap tap-1"></label>
+                <label for="tap-2" class="tap tap-2"></label>
+                <label for="tap-3" class="tap tap-3"></label>
+              </div>
+
+              <!--Proyecto 1: Automatización-->
+              <div class="inner-part">
+                <label for="imgTap" class="img">
+                  <img class="img-1" src="img/proyecto1.png" alt="Automatización de Taladro de Banco">
+                </label>
+                <div class="content content-1">
+                  <span data-i18n="Proj1Category">Automatización + Electrónica</span>
+                  <div class="title" data-i18n="Proj1Title">Automatización de Taladro de Banco</div>
+                  <div class="text" data-i18n="Proj1Text">
+                    Convertimos un taladro de banco en un taladro CNC, incluyendo su programa de control. Podemos desarrollar una automatización similar para tu maquinaria.
                   </div>
-                </article>
-
-                <!-- Projects -->
-                <article class="projectsArt card">
-                  <figure class="card-img">
-                    <img src="img/proyectos_automatizacion.png" alt="TECH">
-                  </figure>
-                  <div class="card-top-text">
-                    <h2 class="card-title" data-i18n="ProjectsTitle">Desarrollo de proyectos tecnológicos</h2>
-                    <p class="card-subtitle" data-i18n="ProjectsSubtitle">Añade tecnología y mejora continua</p>
-                    <div class="card-bottom-text">
-                      <p class="card-text" data-i18n="ProjectsText">¿Tienes una idea tecnológica y no sabes cómo llevarla a cabo? Nosotros somos capaces de desarrollar el proyecto tecnológico que buscas</p>
-                      <p class="card-btn"><a><small class="text-muted" data-i18n="LearnMore">Conoce más</small></a></p>
-                    </div>
-                  </article>
-
-                  <div class="complement-cls">
-                    <section role="complementary" class="courses">
-                      <p>Cursos</p> 
-                    </section>
-                    <section role="complementary" class="courses">
-                      <p data-i18n="Courses">Cursos</p> 
-                    </section>
-                    <section role="complementary" class="manufacturing">
-                      <p data-i18n="Manufacturing">Servicios de Manufactura</p>
-                    </section>
-                    <section role="complementary" class="design">
-                      <p data-i18n="Design">Servicio de Diseño</p>
-                    </section>
-                    <aside class="complementary" role="complementary">
-                      <h1 data-i18n="OurExperience">Nuestra Experiencia</h1>
-                      
-
-                      <!--Comienza tarjeta tipo Blog-->     
-<div class="blog-card">
-  <input type="radio" name="select" id="tap-1" checked>
-  <input type="radio" name="select" id="tap-2">
-  <input type="radio" name="select" id="tap-3">
-  <input type="checkbox" id="imgTap">
-
-  <div class="sliders">
-    <label for="tap-1" class="tap tap-1"></label>
-    <label for="tap-2" class="tap tap-2"></label>
-    <label for="tap-3" class="tap tap-3"></label>
-  </div>
-
-  <!--Primer Proyecto-->
-  <div class="inner-part">
-    <label for="imgTap" class="img">
-      <img class="img-1" src="img/proyecto1.png" alt="Proyecto 1">
-    </label>
-
-    <div class="content content-1">
-      <span>Proyectos personalizados</span>
-      <div class="title">Automatización de Taladro de banco</div>
-      <div class="text">
-        Nuestro equipo realizó la adaptación para convertir un taladro de banco en un taladro CNC, así como su programa de control.
-      </div>
-      <button>Cotiza tu proyecto</button>
-    </div>
-  </div>
-
-  <!--Segundo Proyecto-->
-  <div class="inner-part">
-    <label for="imgTap" class="img">
-      <img class="img-2" src="img/proyecto2.png" alt="Proyecto 2">
-    </label>
-
-    <div class="content content-2">
-      <span>Control de identidad</span>
-      <div class="title">Sistema RFID con almacenamiento en servidor web</div>
-      <div class="text">
-        Beetik fue requerido para realizar una aplicación para controlar el uso de máquinas de servicio y tener control del tiempo de uso, así como de identidad para tener control total en el negocio.
-      </div>
-      <button>Cotiza tu proyecto</button>
-    </div>
-  </div>
-
-  <!--Tercer Proyecto-->
-  <div class="inner-part">
-    <label for="imgTap" class="img">
-      <img class="img-3" src="img/proyecto3.png" alt="Proyecto 3">
-    </label>
-
-    <div class="content content-3">
-      <span>26 December 2019</span>
-      <div class="title">Lorem Ipsum Dolor</div>
-      <div class="text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod excepturi nemo commodi sint eum ipsam odit atque aliquam officia impedit.
-      </div>
-      <button>Cotiza tu proyecto</button>
-    </div>
-  </div>
-</div>
-
-                    </aside>
-                  </section>
-
-                  <!-- Footer -->
-                  <section class="subscription">
-                    <h2 id="form" data-i18n="StayUpdated">Mantente actualizado:</h2>
-                    <form action="#">
-                      <input type="text" name="name" placeholder="Ingresa tu nombre..." required>
-                      <input type="email" name="email" placeholder="Ingresa tu email..." required>
-                      <input type="submit" value="Registrarse" data-i18n="Register">
-                    </form>
-                  </section>
-
-                  <footer class="footer" role="contentinfo">
-  <div class="footer-content">
-    <div class="footer-logo">
-      <img src="img/Estrella_N_transparente.png" alt="Beetik Logo" />
-    </div>
-
-    <div class="footer-links">
-      <ul>
-        <li><a href="/privacy">Privacy</a></li>
-        <li><a href="#" data-i18n="FAQ">Preguntas Frecuentes</a></li>
-        <li><a href="/terms">Terms</a></li>
-        <li><a href="#" data-i18n="ContactUs">Contáctanos</a></li>
-        <li><a href="#">Mapa del sitio</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-social">
-      <a href="https://instagram.com/beetikmx" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://wa.me/5551540916" target="_blank" aria-label="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-      </a>
-      <a href="https://facebook.com/BeetikMx" target="_blank" aria-label="Facebook">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-    </div>
-
-    <div class="footer-copy">
-      <small data-i18n="Copyright">
-        &copy; 2024 BeetikMX. Todos los derechos reservados.
-      </small>
-    </div>
-  </div>
-</footer>
-
-                  <!-- Social -->
-                  <div class="social sticky">
-                    <a href="https://facebook.com/BeetikMX/" title="Visit Facebook" target="_blank"><img class="imgsocial" src="img/Icono_Facebook.png" alt="Facebook"></a>
-                    <a href="#" title="Visit Youtube" target="_blank"><img class="imgsocial" src="img/logo-youtube.png" alt="Youtube"></a>
-                    <a href="#" title="Visit Twitter" target="_blank"><img class="imgsocial" src="img/twitter-logo.png" alt="Twitter"></a>
-                  </div>
-
+                  <button data-i18n="QuoteProject">Cotiza tu proyecto</button>
                 </div>
+              </div>
 
+              <!--Proyecto 2: Automatización dental-->
+              <div class="inner-part">
+                <label for="imgTap" class="img">
+                  <img class="img-2" src="img/proyecto2.png" alt="Automatización para Clínica Dental">
+                </label>
+                <div class="content content-2">
+                  <span data-i18n="Proj2Category">Automatización + IA + Bases de datos</span>
+                  <div class="title" data-i18n="Proj2Title">Automatización para Clínica Dental</div>
+                  <div class="text" data-i18n="Proj2Text">
+                    Un flujo con Google Calendar, IA, n8n y Supabase que organiza pacientes, citas, doctores y tratamientos automáticamente. Podemos desarrollar un sistema similar para tu clínica o negocio.
+                  </div>
+                  <button data-i18n="QuoteProject">Cotiza tu proyecto</button>
+                </div>
+              </div>
 
+              <!--Proyecto 3: Quiniela Malenka-->
+              <div class="inner-part">
+                <label for="imgTap" class="img">
+                  <img class="img-3" src="img/proyecto3.png" alt="Quiniela Malenka">
+                </label>
+                <div class="content content-3">
+                  <span data-i18n="Proj3Category">Web + Móvil + APIs + Automatización</span>
+                  <div class="title" data-i18n="Proj3Title">Quiniela Malenka</div>
+                  <div class="text" data-i18n="Proj3Text">
+                    Plataforma deportiva con app Android, app web, Firebase, APIs deportivas y notificaciones automáticas vía n8n. Un ejemplo de lo que podemos construir a nivel de sistemas digitales completos.
+                  </div>
+                  <button data-i18n="QuoteProject">Cotiza tu proyecto</button>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="cta-row">
+          <a class="btn-outline" href="proyectos.html" data-i18n="SeeAllProjects">Ver todos los proyectos</a>
+        </div>
+      </section>
 
-                <script type="module" src="js/index.js"></script>
+      <!-- Más servicios -->
+      <section class="section" id="mas-servicios" aria-labelledby="mas-servicios-heading">
+        <div class="section-heading">
+          <span class="eyebrow" data-i18n="MoreServicesEyebrow">También ofrecemos</span>
+          <h2 id="mas-servicios-heading" data-i18n="MoreServicesTitle">Más Servicios</h2>
+        </div>
+        <div class="more-services-grid">
+          <div class="more-service-item"><i class="fas fa-graduation-cap" aria-hidden="true"></i> <span data-i18n="MoreServ1">Capacitación y cursos tecnológicos</span></div>
+          <div class="more-service-item"><i class="fas fa-chalkboard-teacher" aria-hidden="true"></i> <span data-i18n="MoreServ2">Talleres de ingeniería</span></div>
+          <div class="more-service-item"><i class="fas fa-cube" aria-hidden="true"></i> <span data-i18n="MoreServ3">Modelado 3D</span></div>
+          <div class="more-service-item"><i class="fas fa-microchip" aria-hidden="true"></i> <span data-i18n="MoreServ4">Electrónica a la medida</span></div>
+          <div class="more-service-item"><i class="fas fa-comments" aria-hidden="true"></i> <span data-i18n="MoreServ5">Consultoría técnica</span></div>
+          <div class="more-service-item"><i class="fas fa-boxes" aria-hidden="true"></i> <span data-i18n="MoreServ6">Proyectos especiales</span></div>
+        </div>
+        <div class="cta-row">
+          <a class="btn-outline" href="servicios.html" data-i18n="SeeMoreServices">Ver todos los servicios</a>
+        </div>
+      </section>
 
+      <!-- Mantente actualizado -->
+      <section class="subscription" aria-labelledby="form">
+        <h2 id="form" data-i18n="StayUpdated">Mantente actualizado:</h2>
+        <form action="#">
+          <label class="sr-only" for="subscribe-name" data-i18n="NameLabel">Nombre</label>
+          <input type="text" id="subscribe-name" name="name" placeholder="Ingresa tu nombre..." aria-label="Nombre" required>
+          <label class="sr-only" for="subscribe-email" data-i18n="EmailLabel">Correo electrónico</label>
+          <input type="email" id="subscribe-email" name="email" placeholder="Ingresa tu email..." aria-label="Correo electrónico" required>
+          <input type="submit" value="Registrarse" data-i18n="Register">
+        </form>
+      </section>
 
+      <!-- Contacto / Inicia un proyecto -->
+      <section class="section start-project" id="contacto" aria-labelledby="contacto-heading">
+        <div class="section-heading">
+          <span class="eyebrow" data-i18n="StartEyebrow">Empecemos</span>
+          <h2 id="contacto-heading" data-i18n="StartTitle">Cuéntanos qué quieres crear</h2>
+        </div>
+        <div class="start-options">
+          <a class="start-option" href="https://wa.me/525658274035?text=Hola%2C%20quiero%20grabar%20algo" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i> <span data-i18n="StartOpt1">Quiero grabar algo</span></a>
+          <a class="start-option" href="https://wa.me/525658274035?text=Hola%2C%20necesito%20un%20producto%20personalizado" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i> <span data-i18n="StartOpt2">Necesito un producto personalizado</span></a>
+          <a class="start-option" href="https://wa.me/525658274035?text=Hola%2C%20necesito%20un%20prototipo" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i> <span data-i18n="StartOpt3">Necesito un prototipo</span></a>
+          <a class="start-option" href="https://wa.me/525658274035?text=Hola%2C%20necesito%20una%20soluci%C3%B3n%20de%20ingenier%C3%ADa" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i> <span data-i18n="StartOpt4">Necesito una solución de ingeniería</span></a>
+          <a class="start-option" href="https://wa.me/525658274035?text=Hola%2C%20quiero%20automatizar%20un%20proceso" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i> <span data-i18n="StartOpt5">Quiero automatizar un proceso</span></a>
+          <a class="start-option" href="https://wa.me/525658274035?text=Hola%2C%20tengo%20otra%20idea" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i> <span data-i18n="StartOpt6">Tengo otra idea</span></a>
+        </div>
+      </section>
 
-              </body>
-              </html>
+      </main>
+
+      <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="img/Estrella_N_transparente.png" alt="Beetik Logo" />
+          </div>
+
+          <nav class="footer-links" aria-label="Enlaces del pie de página">
+            <ul>
+              <li><a href="/privacy">Privacy</a></li>
+              <li><a href="#" data-i18n="FAQ">Preguntas Frecuentes</a></li>
+              <li><a href="/terms">Terms</a></li>
+              <li><a href="contacto.html" data-i18n="ContactUs">Contáctanos</a></li>
+              <li><a href="#">Mapa del sitio</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer-social" aria-label="Redes sociales de Beetik MX">
+            <a href="https://instagram.com/beetikmx" target="_blank" rel="noopener" aria-label="Instagram">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://wa.me/525658274035" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            </a>
+            <a href="https://facebook.com/BeetikMx" target="_blank" rel="noopener" aria-label="Facebook">
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div class="footer-copy">
+            <small data-i18n="Copyright">
+              &copy; 2024 BeetikMX. Todos los derechos reservados.
+            </small>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Floating social menu -->
+      <nav class="social sticky" aria-label="Redes sociales flotantes">
+        <a href="https://instagram.com/beetikmx" title="Visítanos en Instagram" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://facebook.com/BeetikMx" title="Visítanos en Facebook" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="https://wa.me/525658274035" title="Escríbenos por WhatsApp" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+      </nav>
+
+    </div>
+
+    <script type="module" src="js/index.js"></script>
+
+  </body>
+</html>

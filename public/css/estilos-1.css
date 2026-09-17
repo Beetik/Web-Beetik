@@ -3,54 +3,8 @@
   box-sizing: border-box;
 }
 
-/* ---- Utilidades de accesibilidad ---- */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.skip-link {
-  position: absolute;
-  top: -100px;
-  left: 16px;
-  z-index: 1000;
-  padding: 12px 18px;
-  background: #050509;
-  color: #ffd36a;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: top 0.2s ease;
-}
-
-.skip-link:focus {
-  top: 12px;
-}
-
 html {
-  /* Escala tipográfica controlada: antes calc(1em + 1vw) llegaba a
-     ~35px en pantallas grandes (casi el doble de lo normal), lo que
-     hacía que todo el sitio se viera sobredimensionado. Este clamp
-     mantiene una base de 16-18px, propia de un sitio profesional. */
-  font-size: clamp(16px, 0.95rem + 0.35vw, 18px);
-}
-
-/* El header/navbar (dentro de .welcome) ya quedó en el tamaño correcto
-   con el ajuste anterior a html. Para reducir un poco más SOLO el resto
-   del contenido (sin tocar de nuevo la escala base, que afectaría
-   también al header), aplicamos un "zoom" ligero a los bloques que
-   quedan fuera del header/hero: el contenido principal, el footer y el
-   menú social flotante. */
-main#main-content,
-footer.footer,
-nav.social.sticky {
-  zoom: 0.85;
+  font-size: calc(1em + 1vw);
 }
 
 body {
@@ -180,13 +134,6 @@ body {
 
 /* Header radial background */
 .header {
-  /* El header/navbar debe verse exactamente como antes del ajuste de
-     tamaño de texto del resto del sitio. Como los `rem` siempre se
-     calculan contra el <html> raíz (y ya lo reducimos para el resto del
-     contenido), aquí restauramos la fórmula original únicamente para el
-     header, y los valores internos que dependían de rem pasan a em para
-     heredar de esta base en vez de la del <html>. */
-  font-size: calc(1em + 1vw);
   --header-top-height: 15vh;
   --header-collapse: 0px;
   position: fixed;
@@ -226,13 +173,13 @@ body {
   display: flex;
   align-items: center; /* centra verticalmente */
   justify-content: flex-start;
-  gap: 0.5em; /* separación horizontal constante */
+  gap: 0.5rem; /* separación horizontal constante */
   height: 100%; /* que ocupe todo el alto disponible */
 }
 
 /* nav logo */
 .nav-logo {
-  width: 3em;
+  width: 3rem;
   height: auto;
   padding: 1px 0;
   line-height: 6vh;
@@ -240,28 +187,10 @@ body {
 
 /* Display text styles */
 .display-4 {
-  font-family: "Rajdhani", sans-serif;
   font-size: 2.2rem;
   font-weight: bold;
   color: white;
-  margin-top: 0;
-}
-
-/* El hero debe centrarse en el espacio que realmente se ve debajo del
-   header fijo, no en los 100vh completos: antes, el título usaba un
-   margin-top:45vh fijo que no descontaba la altura del header, así que
-   quedaba desplazado hacia arriba respecto al área visible. Header.ts
-   expone la altura real del header en --full-header-height; con eso
-   reservamos ese espacio arriba y centramos el resto con flexbox. */
-.presentation {
-  position: absolute;
-  top: var(--full-header-height, 20vh);
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: 45vh;
 }
 
 /* .Beetik-text in grid */
@@ -269,24 +198,25 @@ body {
   display: flex;
   align-items: center; /* centra verticalmente el texto dentro del contenedor flex */
   font-family: "Rajdhani", sans-serif;
-  font-size: 1.6em;
+  font-size: 1.6rem;
   color: white;
 }
 
 /* Projects and Training aligned to right */
 .desc-text {
   position: absolute;
-  top: 2.3em;
-  right: 2em;
-  font-family: "Rajdhani", sans-serif;
-  font-size: 0.6em;
+  top: 2.3rem;
+  right: 2rem;
+  font-size: 0.6rem;
   color: white;
   text-align: right;
 }
 
 @media (max-width: 600px) {
   .desc-text {
-    font-size: 0.6em;
+    top: 3rem;
+    right: 1rem;
+    font-size: 0.6rem;
   }
 }
 
@@ -327,9 +257,9 @@ body {
   background: rgba(1, 2, 8, 0.98);
   border-top: 1px solid rgba(111, 179, 231, 0.12);
   border-bottom: 1px solid rgba(111, 179, 231, 0.16);
-  font-size: 1em;
+  font-size: 1rem;
   width: 100%;
-  padding: 0 0.2em;
+  padding: 0 0.2rem;
 }
 
 .header > .menu {
@@ -353,13 +283,6 @@ h3,
   font-size: 0.55rem;
 }
 
-/* El menú del header usa su propia base de tamaño (ver .header) */
-.navbar h3,
-.navbar .h3 {
-  font-family: "Rajdhani", sans-serif;
-  font-size: 0.55em;
-}
-
 h3 span,
 h3 i {
   margin-right: 0.3em; /* o la cantidad que desees */
@@ -373,18 +296,13 @@ h3 i {
 }
 
 .checkbtn {
-  font-size: 1em;
+  font-size: 1rem;
   color: white;
   margin-left: auto; /* empuja a la derecha dentro del flex */
   cursor: pointer;
   border: none;
   background: none;
   display: none;
-  transition: color 0.2s ease;
-}
-
-.checkbtn:hover {
-  color: #ffd36a;
 }
 
 @media (max-width: 858px) {
@@ -419,20 +337,13 @@ h3 i {
 }
 
 .menu-items li.active a {
-  color: #ffd36a;
+  color: #00c4ff;
 }
 
 .menu-items li:hover a {
-  color: #e7b96a;
+  color: #b5e4fc;
 }
 
-/* El menú móvil (hamburguesa) usaba un azul grisáceo (#2c3e50) y acentos
-   cian que no tienen nada que ver con la paleta dorada/oscura del resto
-   del sitio, además de un z-index:-1 que lo podía dejar renderizado
-   detrás de otro contenido al abrirse. Se alinea con el mismo fondo
-   oscuro y borde dorado que ya usa el menú desplegable de "Servicios"
-   (.dropdown-menu), y se corrige el z-index para que siempre quede por
-   encima del contenido de la página. */
 @media (max-width: 858px) {
   .menu-items {
     position: absolute;
@@ -440,36 +351,19 @@ h3 i {
     left: 0;
     width: 100%;
     max-height: 0; /* colapsado inicialmente */
-    overflow-y: auto;
-    background: rgba(1, 2, 8, 0.98);
-    border-top: 1px solid rgba(231, 167, 23, 0.35);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    background: #2c3e50;
     transition: max-height 0.5s ease;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    padding: 0.5em 0;
-    z-index: 4;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
   }
   .menu-items.show {
-    max-height: 70vh; /* suficiente para todos los links sin tapar toda la pantalla */
+    max-height: 500px; /* ajusta según la altura de tus links */
   }
   .menu-items li {
-    width: 100%;
-    margin: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  }
-  .menu-items li:last-child {
-    border-bottom: none;
-  }
-  .menu-items li a {
-    width: 100%;
-    justify-content: flex-start;
-    padding: 0.9em 1.3em;
-  }
-  .menu-items li:hover a,
-  .menu-items li a:hover {
-    background: rgba(231, 167, 23, 0.12);
+    margin: 20px 0;
   }
 }
 
@@ -478,8 +372,8 @@ h3 i {
   display: flex;
   align-items: center; /* misma altura */
   justify-content: flex-start;
-  gap: 0.5em; /* pequeña distancia constante */
-  padding-left: 1em;
+  gap: 0.5rem; /* pequeña distancia constante */
+  padding-left: 1rem;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 2fr 1fr;
   height: 15vh;
@@ -502,23 +396,6 @@ h3 i {
     justify-content: flex-start; /* alinear a la izquierda */
     margin-left: 20%; /* mover al 25% de la pantalla */
     margin-right: 0;
-  }
-}
-
-/* En pantallas angostas el título "BEETIK MX" ya ocupa casi todo el ancho
-   del header, así que ".desc-text" (posicionado en absoluto arriba a la
-   derecha) terminaba encimado sobre el título en vez de quedar a un
-   lado. La primera solución lo sacaba del posicionamiento absoluto y le
-   daba su propia línea, pero eso hacía crecer todo el contenedor del
-   header (más espacio del que se quería usar). Se mantiene absoluto
-   (el header conserva su alto original, 15vh) y solo se empuja más
-   abajo con un "top" en porcentaje —relativo al alto real del propio
-   contenedor fijo, así que no depende de adivinar tamaños de fuente—
-   para que quede debajo del título en vez de encima. */
-@media (max-width: 858px) {
-  .desc-text {
-    top: 68%;
-    right: 1em;
   }
 }
 
@@ -545,7 +422,7 @@ h3 i {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0.18em; /* 👈 espacio superior */
+  margin-top: 0.18rem; /* 👈 espacio superior */
 }
 
 .circle2 {
@@ -605,7 +482,6 @@ button {
   outline: none;
   background: #111;
   color: #fff;
-  font-family: "Rajdhani", sans-serif;
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 2px;
@@ -792,18 +668,6 @@ button a {
   padding: 1rem;
 }
 
-/* En pantallas grandes, que las 3 tarjetas de "¿Qué podemos construir
-   para ti?" aprovechen el ancho disponible en vez de quedarse en su
-   máximo original de 350px (lo que las obligaba a partirse en 2+1). En
-   móvil (.articles en columna) dejamos las tarjetas como estaban. */
-@media (min-width: 769px) {
-  .articles > .card {
-    flex: 1 1 320px;
-    max-width: 420px;
-    margin: 0;
-  }
-}
-
 .complementary {
   order: 2;
   padding-top: 1.5rem;
@@ -813,17 +677,15 @@ button a {
    como puente visual entre el título y el slider de proyectos — como si
    cada proyecto fuera un escalón hacia el descubrimiento. Va en el flujo
    normal del documento (no como fondo absoluto) para que se vea completa
-   y no quede oculta detrás del blog-card. La pirámide conecta con el logo
-   (de inspiración maya) y con la paleta de estrellas del hero; sobre el
-   ápice flota una pequeña constelación (líneas + puntos dorados), como
-   guiño a la lectura del cielo que guiaba a los mayas. */
+   y no quede oculta detrás del blog-card. Motivo geométrico genérico
+   (grecas/escalones), no una representación de un templo específico. */
 .complementary h1::after {
   content: "";
   display: block;
   width: min(55%, 220px);
   aspect-ratio: 400 / 240;
   margin: 0.75rem auto 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'%3E%3Cpath d='M20,220 L20,202 L48,202 L48,184 L76,184 L76,166 L104,166 L104,148 L132,148 L132,130 L160,130 L160,112 L170,112 L170,90 L230,90 L230,112 L240,112 L240,130 L268,130 L268,148 L296,148 L296,166 L324,166 L324,184 L352,184 L352,202 L380,202 L380,220 Z' fill='none' stroke='%23e7b96a' stroke-width='4'/%3E%3Cg stroke='%23ffd36a' stroke-width='1.5'%3E%3Cline x1='120' y1='55' x2='165' y2='40'/%3E%3Cline x1='165' y1='40' x2='210' y2='50'/%3E%3Cline x1='210' y1='50' x2='255' y2='30'/%3E%3Cline x1='210' y1='50' x2='245' y2='70'/%3E%3C/g%3E%3Cg fill='%23ffd36a' stroke='none'%3E%3Ccircle cx='120' cy='55' r='4'/%3E%3Ccircle cx='165' cy='40' r='5'/%3E%3Ccircle cx='210' cy='50' r='4'/%3E%3Ccircle cx='255' cy='30' r='4'/%3E%3Ccircle cx='245' cy='70' r='3'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'%3E%3Cpath d='M20,220 L20,202 L48,202 L48,184 L76,184 L76,166 L104,166 L104,148 L132,148 L132,130 L160,130 L160,112 L170,112 L170,60 L230,60 L230,112 L240,112 L240,130 L268,130 L268,148 L296,148 L296,166 L324,166 L324,184 L352,184 L352,202 L380,202 L380,220 Z' fill='none' stroke='%23e7b96a' stroke-width='4'/%3E%3Cline x1='200' y1='220' x2='200' y2='112' stroke='%23e7b96a' stroke-width='2' stroke-dasharray='6 8'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -886,10 +748,10 @@ button a {
 
 .language-switcher {
   position: absolute;
-  top: 0.5em;
-  right: 0.5em;
+  top: 0.5rem;
+  right: 0.5rem;
   display: flex;
-  gap: 0.5em;
+  gap: 0.5rem;
   z-index: 9999; /* para que siempre esté encima */
 }
 
@@ -1130,113 +992,29 @@ BLOG CARROUSEL
   width: 95%;
 }
 
-/* Carrusel de proyectos: reescrito con medidas flexibles (clamp/%) en vez
-   de los px fijos originales (imagen 260px, contenido 530px + 50px de
-   margen, imagen expandida 850px...), que sumaban más ancho del que el
-   propio .blog-card podía dar y por eso se salía de la pantalla en
-   móvil. Los tres ".inner-part" siguen apilados con position:absolute
-   para el crossfade entre pestañas, así que .blog-card necesita una
-   altura explícita (no puede calcularla del contenido); se define por
-   breakpoint más abajo, con margen extra para que el botón y los puntos
-   del slider quepan siempre dentro del borde. */
 .blog-card {
   position: relative;
+  margin: 2rem auto; /* centrado horizontal */
   display: block;
 
-  height: 400px;
+  height: 370px;
   width: 95%;
   max-width: 850px;
-  margin: 2rem auto;
+  margin: auto;
   border-radius: 0; /* forma rectangular tipo piedra */
-
-  /* Interior de una cámara maya: friso escalonado tallado arriba y abajo
-     (mismo motivo de la pirámide de la sección), un resplandor cálido
-     arriba a la izquierda como si entrara luz de antorcha, y dos capas
-     de líneas repetidas que simulan las juntas entre bloques de piedra
-     sobre un degradado de piedra oscura. */
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='16'%3E%3Cpath d='M0,16 L0,8 L8,8 L8,0 L16,0 L16,8 L24,8 L24,0 L32,0 L32,8 L40,8 L40,16' fill='none' stroke='%23c19a6b' stroke-width='2'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='16'%3E%3Cpath d='M0,0 L0,8 L8,8 L8,16 L16,16 L16,8 L24,8 L24,16 L32,16 L32,8 L40,8 L40,0' fill='none' stroke='%23c19a6b' stroke-width='2'/%3E%3C/svg%3E"),
-    radial-gradient(
-      circle at 18% 18%,
-      rgba(255, 181, 90, 0.22) 0%,
-      rgba(255, 140, 60, 0.08) 40%,
-      transparent 65%
-    ),
-    repeating-linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.16) 0 2px,
-      transparent 2px 48px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.12) 0 2px,
-      transparent 2px 72px
-    ),
-    linear-gradient(160deg, #5a4438 0%, #4b3832 45%, #362721 100%);
-  background-repeat: repeat-x, repeat-x, no-repeat, repeat, repeat, no-repeat;
-  background-position: top left, bottom left, 0 0, 0 0, 0 0, 0 0;
-  background-size: 40px 16px, 40px 16px, 70% 70%, auto, auto, auto;
-
-  box-shadow:
-    0px 10px 50px rgba(193, 154, 107, 0.5),
-    inset 0 0 60px rgba(0, 0, 0, 0.55),
-    inset 0 0 26px rgba(255, 181, 90, 0.12);
+  background: #4b3832;
+  box-shadow: 0px 10px 50px rgba(193, 154, 107, 0.5);
   border: 4px solid #c19a6b;
   font-family: "Georgia", serif;
-  overflow: hidden; /* red de seguridad: nada se dibuja fuera del borde */
-}
-
-/* Brillo de antorcha parpadeante en ambas esquinas superiores, como si el
-   carrusel se viera desde dentro de la pirámide iluminado por fuego. */
-.blog-card::before,
-.blog-card::after {
-  content: "";
-  position: absolute;
-  top: -30px;
-  width: 130px;
-  height: 130px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 181, 90, 0.4) 0%,
-    rgba(255, 140, 60, 0.14) 45%,
-    transparent 72%
-  );
-  filter: blur(1px);
-  animation: torch-flicker 3.4s ease-in-out infinite;
-  pointer-events: none;
-  z-index: 0;
-}
-.blog-card::before {
-  left: -20px;
-  animation-delay: 0s;
-}
-.blog-card::after {
-  right: -20px;
-  animation-delay: 1.6s;
-}
-
-@keyframes torch-flicker {
-  0%,
-  100% {
-    opacity: 0.55;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.9;
-    transform: scale(1.1);
-  }
 }
 
 .inner-part {
   position: absolute;
-  inset: 0;
-  z-index: 1; /* por encima del brillo de antorcha de .blog-card::before/::after */
   display: flex;
+  height: 360px;
   align-items: center;
   justify-content: center;
-  gap: clamp(1rem, 4vw, 2.5rem);
-  padding: 0 clamp(14px, 4vw, 25px) 46px;
+  padding: 0 25px;
 }
 
 #imgTap:checked ~ .inner-part {
@@ -1245,24 +1023,19 @@ BLOG CARROUSEL
 }
 
 .inner-part .img {
-  height: clamp(140px, 26vw, 260px);
-  width: clamp(140px, 26vw, 260px);
+  height: 260px;
+  width: 260px;
   flex-shrink: 0;
   overflow: hidden;
   border-radius: 0; /* recto */
-  /* Como si la imagen estuviera empotrada en un nicho tallado en la
-     piedra: sombra hacia afuera + un borde interior oscuro que simula
-     profundidad. */
-  box-shadow:
-    2px 3px 15px rgba(193, 154, 107, 0.4),
-    inset 0 0 14px rgba(0, 0, 0, 0.55);
+  box-shadow: 2px 3px 15px rgba(193, 154, 107, 0.4);
   border: 3px solid #c19a6b;
 }
 #imgTap:checked ~ .inner-part .img {
-  height: 100%;
-  width: 100%;
+  height: 370px;
+  width: 850px;
   z-index: 99;
-  margin-top: 0;
+  margin-top: 10px;
   transition: 0.3s 0.2s ease-in;
 }
 .img img {
@@ -1280,10 +1053,9 @@ BLOG CARROUSEL
   transition-delay: 0.2s;
 }
 .content {
-  padding: 0 clamp(8px, 2vw, 20px) 0 clamp(12px, 3vw, 35px);
-  flex: 1 1 320px;
-  max-width: 530px;
-  min-width: 0; /* permite que el texto se ajuste en vez de forzar overflow */
+  padding: 0 20px 0 35px;
+  width: 530px;
+  margin-left: 50px;
   opacity: 0;
   transition: 0.6s;
 }
@@ -1294,37 +1066,37 @@ BLOG CARROUSEL
 #tap-2:checked ~ .inner-part .content-2,
 #tap-3:checked ~ .inner-part .content-3 {
   opacity: 1;
+  margin-left: 0px;
   z-index: 100;
   transition-delay: 0.3s;
 }
 .content span {
   display: block;
   color: #c19a6b;
-  margin-bottom: clamp(8px, 1.5vw, 15px);
-  font-size: clamp(15px, 1.6vw, 22px);
+  margin-bottom: 15px;
+  font-size: 22px;
   font-weight: 600;
 }
 .content .title {
-  font-size: clamp(18px, 2vw, 26px);
+  font-size: 26px;
   font-weight: 700;
   color: #f5f5dc;
-  margin-bottom: clamp(10px, 1.5vw, 20px);
-  /* Línea doble tipo inscripción tallada en vez de un simple subrayado. */
-  border-bottom: 3px double #c19a6b;
-  padding-bottom: 6px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #c19a6b;
+  padding-bottom: 4px;
 }
 .content .text {
   color: #f5f5dc;
-  font-size: clamp(13px, 1.3vw, 17px);
-  margin-bottom: clamp(12px, 2vw, 30px);
-  line-height: 1.45em;
+  font-size: 17px;
+  margin-bottom: 30px;
+  line-height: 1.5em;
   text-align: justify;
 }
 .content button {
   display: inline-flex;
-  padding: clamp(8px, 1.2vw, 12px) clamp(12px, 1.6vw, 18px);
+  padding: 12px 18px;
   border: none;
-  font-size: clamp(12px, 1.1vw, 15px);
+  font-size: 15px;
   text-transform: uppercase;
   color: #4b3832;
   font-weight: 600;
@@ -1334,10 +1106,6 @@ BLOG CARROUSEL
   outline: none;
   background: linear-gradient(147deg, #c19a6b 0%, #a86f3d 74%);
   border: 2px solid #c19a6b;
-  /* Relieve tallado: sombra dura abajo + brillo fino arriba. */
-  box-shadow:
-    0 3px 0 rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 240, 220, 0.25);
 }
 .content button:hover {
   background: linear-gradient(147deg, #a86f3d 0%, #7b4b28 74%);
@@ -1345,8 +1113,8 @@ BLOG CARROUSEL
 }
 .sliders {
   position: absolute;
-  bottom: 14px;
-  left: 50%;
+  bottom: 25px;
+  left: 65%;
   transform: translateX(-50%);
   z-index: 12;
 }
@@ -1355,15 +1123,13 @@ BLOG CARROUSEL
 }
 .sliders .tap {
   position: relative;
-  height: 8px;
-  width: clamp(30px, 6vw, 50px);
+  height: 10px;
+  width: 50px;
   background: #c19a6b;
   border-radius: 0;
   display: inline-flex;
   margin: 0 3px;
   cursor: pointer;
-  /* Pequeño bloque de piedra tallado en vez de una barra plana. */
-  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.3);
 }
 .sliders .tap:hover {
   background: #a86f3d;
@@ -1391,47 +1157,6 @@ input[type="checkbox"] {
   width: 100%;
 }
 
-/* Carrusel en móvil: imagen y texto ya no caben lado a lado ni con
-   clamp(), así que se apilan verticalmente. La tarjeta necesita más
-   alto porque, al apilar, el contenido ocupa más espacio vertical. */
-@media (max-width: 700px) {
-  .blog-card {
-    /* 560px dejaba de sobra un hueco vacío debajo del contenido apilado
-       en pantallas chicas; se ajustó al alto real que necesita imagen +
-       texto + botón + puntos del slider. */
-    height: auto;
-    min-height: 460px;
-  }
-
-  .inner-part {
-    flex-direction: column;
-    justify-content: center;
-    padding: 16px 16px 44px;
-    gap: 0.5rem;
-    overflow-y: auto;
-  }
-
-  .inner-part .img {
-    width: clamp(120px, 40vw, 170px);
-    height: clamp(120px, 40vw, 170px);
-  }
-
-  .content {
-    max-width: 100%;
-    padding: 0 4px;
-    text-align: center;
-  }
-
-  .content .text {
-    text-align: left;
-  }
-
-  .content button {
-    display: flex;
-    margin: 0 auto;
-  }
-}
-
 /*==================================================================
   REDISEÑO 2026: navegación con dropdown, plantilla de subpáginas y
   las nuevas secciones del home (Grabado Láser, Bazar, Ingeniería,
@@ -1445,82 +1170,22 @@ input[type="checkbox"] {
 
 .dropdown-caret {
   font-size: 0.6em;
-  margin-left: 0.35em;
+  margin-left: 0.35rem;
 }
 
 .dropdown-menu {
   list-style: none;
   margin: 0;
-  padding: 0.5em 0;
-  /* El menú vive dentro de .header, cuyo font-size es calc(1em + 1vw)
-     (grande a propósito, solo para el header/navbar). Sin fijar un
-     tamaño propio aquí, todos los "em" de abajo (iconos, padding,
-     texto) heredaban esa base y el menú se veía enorme. Se fija un
-     tamaño de letra normal, igual al del resto del sitio. */
-  font-size: 1rem;
-}
-
-/* La regla ".menu-items li { display:flex }" también aplica aquí porque
-   estos <li> son descendientes de .menu-items (el <ul class="dropdown-menu">
-   vive dentro de un <li class="nav-items">). Eso convierte cada <li> en un
-   contenedor flex cuyo único hijo (<a>) se encoge a su contenido en vez de
-   ocupar todo el ancho — por eso solo el texto/ícono reaccionaba al hover,
-   no la fila completa. Se restaura el <li> a bloque normal y se fuerza el
-   <a> a ocupar el 100% del ancho del menú. */
-.dropdown-menu li {
-  display: block;
-  width: 100%;
+  padding: 0.5rem 0;
 }
 
 @media (min-width: 859px) {
-  /* "Servicios" es el único item del menú con submenú. Antes su zona de
-     hover/click era solo el texto con su padding normal (como cualquier
-     otro link), más chica que el alto real del navbar, lo que se sentía
-     poco intencional al pasar el mouse. Ahora el <li> se estira al alto
-     completo del navbar (align-self:stretch) y su link ocupa ese alto
-     completo, así el "botón" de Servicios cubre toda la franja del
-     navbar, igual que se vería en un sitio profesional. */
-  .nav-items.has-dropdown {
-    align-self: stretch;
-    display: flex;
-  }
-
-  .nav-items.has-dropdown > .nav-link-item {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 14px;
-    transition: color 0.2s ease, background 0.2s ease;
-  }
-
-  .nav-items.has-dropdown:hover > .nav-link-item,
-  .nav-items.has-dropdown:focus-within > .nav-link-item {
-    color: #ffd36a;
-    background: rgba(231, 167, 23, 0.12);
-  }
-
-  .nav-items.has-dropdown:hover .dropdown-caret,
-  .nav-items.has-dropdown:focus-within .dropdown-caret {
-    transform: rotate(180deg);
-  }
-
-  .dropdown-caret {
-    display: inline-block;
-    transition: transform 0.25s ease;
-  }
-
-  /* El menú desplegable centrado (left:50% + translateX(-50%)) quedaba
-     más ancho que el propio botón y se sentía flotando en el aire.
-     Alineado al borde izquierdo del botón, más angosto y pegado justo
-     debajo del navbar (sin el salto de 8px), se ve como un menú de
-     verdad en vez de un globo centrado. */
   .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 0;
-    transform: translateY(6px);
-    min-width: 200px;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    min-width: 230px;
     background: rgba(1, 2, 8, 0.98);
     border: 1px solid rgba(231, 167, 23, 0.35);
     border-radius: 8px;
@@ -1528,9 +1193,9 @@ input[type="checkbox"] {
     opacity: 0;
     visibility: hidden;
     transition:
-      opacity 0.2s ease,
-      transform 0.2s ease,
-      visibility 0.2s;
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s;
     z-index: 5;
   }
 
@@ -1538,19 +1203,17 @@ input[type="checkbox"] {
   .nav-items.has-dropdown:focus-within > .dropdown-menu {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
 }
 
 .dropdown-menu li a {
   display: flex;
-  width: 100%;
   align-items: center;
-  gap: 0.6em;
-  padding: 0.6em 1.1em;
+  gap: 0.6rem;
+  padding: 0.6rem 1.1rem;
   color: #fff0e6;
-  font-family: "Rajdhani", sans-serif;
-  font-size: 0.95em;
+  font-size: 0.95rem;
   white-space: nowrap;
   justify-content: flex-start;
   text-decoration: none;
@@ -1562,61 +1225,43 @@ input[type="checkbox"] {
   background: rgba(231, 167, 23, 0.12);
 }
 
-/* En móvil ".dropdown-menu" no tenía la lógica de mostrar/ocultar del
-   popover de escritorio (esa vive dentro de "@media (min-width:859px)"),
-   así que se quedaba siempre expandida en el flujo normal — se veía
-   como una columna fija de 5 links debajo de "Servicios" en vez de
-   comportarse como un dropdown real. Ahora arranca colapsada
-   (max-height:0) y Header.ts/Header.js le agregan la clase ".open" al
-   <li> padre cuando se toca "Servicios" en móvil, igual que ya pasa con
-   el botón de hamburguesa. */
 @media (max-width: 858px) {
-  /* ".menu-items li" (regla base, fuera de media query) pone
-     "display:flex; align-items:center" en TODOS los <li> del menú,
-     incluido el de "Servicios". Eso convertía a .nav-items.has-dropdown
-     en una fila horizontal con dos hijos uno al lado del otro
-     (a.nav-link-item y ul.dropdown-menu), por eso el submenú aparecía
-     a la derecha de "Servicios" en vez de debajo. Aquí lo forzamos a
-     apilarse en columna, solo en pantallas chicas. */
-  .nav-items.has-dropdown {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
   .dropdown-menu {
-    width: 100%;
-    padding-left: 1.5em;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease;
-  }
-
-  .nav-items.has-dropdown.open > .dropdown-menu {
-    max-height: 400px;
-  }
-
-  .dropdown-caret {
-    transition: transform 0.25s ease;
-  }
-
-  .nav-items.has-dropdown.open .dropdown-caret {
-    transform: rotate(180deg);
+    padding-left: 1.5rem;
   }
 }
 
 /* ---- Plantilla para subpáginas (Grabado Láser, Ingeniería, etc.):
-   el header debe verse y comportarse EXACTAMENTE igual que en Inicio
-   (mismo alto, mismo logo/título, mismo "Proyectos y Capacitación",
-   mismo selector de idioma, fijo/pegado arriba al hacer scroll), así
-   que ya no se sobreescribe nada de ".header"/".grid-container"/
-   ".desc-text"/".language-switcher" aquí — todas las páginas comparten
-   exactamente las mismas reglas. Como el header está fuera del flujo
-   normal (position:fixed), el contenido de la página (más abajo)
-   necesita compensar su altura real; eso se resuelve con
-   --full-header-height en .subpage main, que Header.ts/Header.js
-   calcula midiendo el header real en cada página. */
-.subpage main {
-  padding-top: var(--full-header-height, 150px);
+   igual que en las páginas legales, el header deja de ser "fixed"
+   porque estas páginas no tienen el hero de 100vh contra el que
+   colapsar, así que el navbar vive en el flujo normal, arriba de un
+   banner de página corto en vez del hero grande de inicio. */
+.subpage .header {
+  position: relative;
+}
+
+.subpage .header > .container,
+.subpage .header > .menu {
+  position: static;
+  transform: none;
+  width: 100%;
+}
+
+.subpage .grid-container {
+  min-height: 100px;
+  height: auto;
+  padding: 20px 24px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.subpage .desc-text {
+  position: static;
+  margin-left: auto;
+}
+
+.subpage .language-switcher {
+  position: static;
 }
 
 .page-hero {
@@ -1663,37 +1308,13 @@ input[type="checkbox"] {
   padding: clamp(2.5rem, 6vw, 4.5rem) 1.5rem;
 }
 
-/* "Ingeniería, Prototipado y Manufactura" y "Automatiza el trabajo
-   repetitivo": cada una ocupa una pantalla completa (100vh) y centra su
-   contenido vertical y horizontalmente, para que el recorrido del home
-   se sienta como secciones bien distribuidas en vez de bloques de texto
-   apilados. */
-#ingenieria,
-#automatizacion,
-#mas-servicios {
-  min-height: 100vh;
-  max-width: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: clamp(2.5rem, 6vh, 4.5rem);
-  padding-bottom: clamp(2.5rem, 6vh, 4.5rem);
-}
-
-#ingenieria > *,
-#automatizacion > *,
-#mas-servicios > * {
-  width: 100%;
-  max-width: 1200px;
-}
-
 .section-heading {
   text-align: center;
   max-width: 760px;
   margin: 0 auto clamp(2rem, 5vw, 3rem);
 }
 
+.eyebrow,
 .section-heading .eyebrow {
   display: inline-block;
   color: #ffb98a;
@@ -1817,48 +1438,42 @@ input[type="checkbox"] {
 }
 
 /* ---- Botón de WhatsApp reutilizable ---- */
-/* Botones más discretos: fondo translúcido y color en vez del verde sólido
-   grande de antes, para que se integren al resto de la página en lugar de
-   saltar como un botón de app ajeno al sitio. */
 .btn-whatsapp {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  padding: 0.5rem 1rem;
-  background: rgba(37, 211, 102, 0.1);
-  border: 1px solid rgba(37, 211, 102, 0.4);
-  color: #6be89a;
-  font-weight: 600;
-  font-size: 0.85rem;
+  gap: 0.6rem;
+  padding: 0.85rem 1.6rem;
+  background: #25d366;
+  color: #05230f;
+  font-weight: 700;
+  font-size: 1rem;
   border-radius: 50px;
   text-decoration: none;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
   transition:
-    background 0.25s ease,
-    border-color 0.25s ease,
-    color 0.25s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .btn-whatsapp:hover {
-  background: rgba(37, 211, 102, 0.18);
-  border-color: #6be89a;
-  color: #a4f5c1;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 14px 32px rgba(37, 211, 102, 0.45);
 }
 
 .btn-whatsapp i {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .btn-outline {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50px;
-  color: rgba(255, 255, 255, 0.85);
+  color: #fff;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 0.85rem;
+  font-weight: 600;
   transition:
     border-color 0.25s ease,
     color 0.25s ease;
@@ -1872,9 +1487,9 @@ input[type="checkbox"] {
 .cta-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: 1rem;
   justify-content: center;
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
 }
 
 /* ---- Grabado Láser: sección visual en el home + catálogo completo
@@ -1889,9 +1504,8 @@ input[type="checkbox"] {
 }
 
 .engrave-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 1rem;
   margin: 0 0 2rem;
 }
@@ -1901,8 +1515,6 @@ input[type="checkbox"] {
   flex-direction: column;
   align-items: center;
   gap: 0.6rem;
-  flex: 1 1 140px;
-  max-width: 170px;
   padding: 1.25rem 0.75rem;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 156, 63, 0.25);
@@ -2058,14 +1670,10 @@ input[type="checkbox"] {
 .automation-examples {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  grid-auto-rows: 1fr;
-  align-items: stretch;
   gap: 1rem;
 }
 
 .automation-example {
-  display: flex;
-  flex-direction: column;
   padding: 1.25rem;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -2126,9 +1734,8 @@ input[type="checkbox"] {
 
 /* ---- Más servicios: lista compacta ---- */
 .more-services-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
 }
 
@@ -2136,8 +1743,6 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  flex: 1 1 220px;
-  max-width: 280px;
   padding: 1rem 1.1rem;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -2157,41 +1762,36 @@ input[type="checkbox"] {
 }
 
 .start-options {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.7rem;
-  margin: 1.75rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
   text-align: left;
 }
 
 .start-option {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
-  flex: 1 1 240px;
-  max-width: 320px;
-  padding: 0.7rem 0.9rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 10px;
-  color: rgba(255, 240, 230, 0.85);
+  gap: 0.85rem;
+  padding: 1.1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  color: #fff0e6;
   text-decoration: none;
-  font-size: 0.82rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 600;
   transition:
     border-color 0.25s ease,
-    background 0.25s ease,
-    color 0.25s ease;
+    background 0.25s ease;
 }
 
 .start-option:hover {
-  border-color: rgba(255, 211, 106, 0.4);
-  background: rgba(255, 211, 106, 0.06);
-  color: #fff0e6;
+  border-color: #25d366;
+  background: rgba(37, 211, 102, 0.08);
 }
 
 .start-option i {
-  font-size: 1rem;
-  color: rgba(255, 211, 106, 0.75);
+  font-size: 1.3rem;
+  color: #25d366;
 }
